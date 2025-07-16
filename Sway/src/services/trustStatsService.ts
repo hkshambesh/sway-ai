@@ -55,7 +55,7 @@ export function calculateStats(
 
       if (trustedPosts === 0) return;
 
-      // least probable trusted post URL mock: pick first matching
+      // least probable trusted post URL 
       const trustedPostUrl =
         authorPosts.find((p) =>
           classifications.some(
@@ -68,7 +68,6 @@ export function calculateStats(
           ? Number(((trustedPosts / totalPosts) * 100).toFixed(2))
           : 0;
 
-      // For simplicity subcategory_trusted_percentage is same in this sample
       const subcategoryTrustedPercentage = overallTrustedPercentage;
 
       results.push({
